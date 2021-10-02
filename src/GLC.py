@@ -8,4 +8,9 @@ class GLC:
         self.actual = self.first
 
     def calculate_random(self):
-        return (self.actual * self.scalarNumber + self.constant)/self.modNumber
+        new_actual = (self.actual * self.scalarNumber + self.constant) / self.modNumber
+        self.actual = new_actual
+        return new_actual
+
+    def calculate_random_uniform(self):
+        return (self.calculate_random()) / self.modNumber
