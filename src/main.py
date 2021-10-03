@@ -2,7 +2,7 @@ from GLC import GLC
 
 
 def main():
-    first = GLC(10, 1, 7, 7)
+    first = GLC(9, 4, 0, 1)
     first.create_plot()
 
 

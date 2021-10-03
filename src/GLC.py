@@ -25,14 +25,11 @@ class GLC:
         for i in range(iterations):
             value = self.calculate_random_uniform()
             values.append(value)
-            print(value)
         return values
 
     def create_plot(self):
-        random_values = self.calculate_multiple_random_uniform(1001)
-        random_values = Counter(random_values)
-        fig, ax = plt.subplots()
-        n, bins, patches = ax.hist(random_values, 100, density=False)
-        fig.tight_layout()
+        random_values = self.calculate_multiple_random_uniform(1587)
+        num_bins = 9
+        plt.hist(random_values, num_bins, facecolor='blue', alpha=0.5, ec='black')
         plt.show()
-        print(random_values)
+
