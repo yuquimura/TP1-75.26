@@ -27,8 +27,8 @@ class GLC:
             values.append(value)
         return values
 
-    def create_plot(self):
-        random_values = self.calculate_multiple_random_uniform(1587)
+    def create_plot(self, quantity):
+        random_values = self.calculate_multiple_random_uniform(quantity)
         num_bins = 9
         plt.hist(random_values, num_bins, facecolor='blue', alpha=0.5, ec='black')
         plt.show()
